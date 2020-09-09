@@ -54,12 +54,12 @@ function switchTheme(event){
 // Event Listener
 toggleSwitch.addEventListener('change', switchTheme);
 
-// Check Theme Modeconst currentTheme = localStorage.getItem('theme');
+// Check local Storage for Theme
 let currentTheme = localStorage.getItem('theme'); 
 if(currentTheme){
     document.documentElement.setAttribute('data-theme', currentTheme);
     if(currentTheme === 'dark'){
-        toggleIcon.checked = true;
+        toggleSwitch.checked = true;
          darkMode();
     }
 }
